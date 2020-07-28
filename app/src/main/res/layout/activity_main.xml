@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/qwerty"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    android:alpha="1"
+    android:background="@drawable/nurse"
+    android:filterTouchesWhenObscured="false"
+    android:soundEffectsEnabled="true"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/know_your_disease"
+        android:textColor="#DD1BB0"
+        android:textSize="40sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rusted"
+        android:layout_width="203dp"
+        android:layout_height="178dp"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/can"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/Cancer"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+        <RadioButton
+            android:id="@+id/aid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/a_i_d_s"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+        <RadioButton
+            android:id="@+id/liv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/liver_cirrhosis"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+        <RadioButton
+            android:id="@+id/kid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/kidney_stone"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+        <RadioButton
+            android:id="@+id/bra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/brain_tumor"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+    </RadioGroup>
+
+    <ImageButton
+        android:id="@+id/hea"
+        style="@android:style/Widget.DeviceDefault.ImageButton"
+        android:layout_width="57dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="#40FFFFFF"
+        android:contentDescription="@string/todo"
+        android:cropToPadding="true"
+        android:scaleType="centerInside"
+        android:soundEffectsEnabled="true"
+        android:src="@drawable/heard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/podapatti" />
+
+    <TextView
+        android:id="@+id/cli"
+        android:layout_width="142dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Click the above button to take the hearing test."
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hea" />
+
+    <Button
+        android:id="@+id/podapatti"
+        android:layout_width="122dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/get_info"
+        app:layout_constraintBottom_toTopOf="@+id/cli"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rusted"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/e1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#F44336"
+        android:onClick="always"
+        android:text="Emergency Text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

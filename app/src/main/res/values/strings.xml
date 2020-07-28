@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">KYDmed+ </string>
+    <string name="cancer">CANCER</string>
+    <string name="press_any_button">Press any button!</string>
+    <string name="cause">CAUSE</string>
+    <string name="symptom">SYMPTOM</string>
+    <string name="know_your_disease">Know Your Disease</string>
+    <string name="Cancer">Cancer</string>
+    <string name="a_i_d_s">A.I.D.S</string>
+    <string name="liver_cirrhosis">Liver Cirrhosis</string>
+    <string name="kidney_stone">Kidney Stone</string>
+    <string name="brain_tumor">Brain Tumor</string>
+    <string name="click_button_below_to_take_hearing_test">Click Button Below To Take Hearing Test</string>
+    <string name="get_info">Get Info</string>
+    <string name="todo">TODO</string>
+</resources>
