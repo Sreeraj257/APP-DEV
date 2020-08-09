@@ -4,50 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/aid"
+    android:background="@drawable/gradient_back"
     tools:context=".aids">
 
     <Button
         android:id="@+id/SYS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:background="#C80DA9EB"
+        android:clickable="true"
+        android:fontFamily="@font/getinfo"
         android:text="@string/symptom"
-        app:layout_constraintHorizontal_bias="0.167"
+        android:elevation="5dp"
+        android:outlineProvider="bounds"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <Button
         android:id="@+id/CAU"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:background="#C80DA9EB"
+        android:clickable="true"
+        android:fontFamily="@font/getinfo"
+        android:elevation="5dp"
+        android:outlineProvider="bounds"
         android:text="@string/cause"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
         android:id="@+id/T1"
-        android:layout_width="257dp"
-        android:layout_height="438dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:editable="false"
         android:ems="10"
+        android:fontFamily="@font/main"
         android:gravity="start|top"
         android:hint="Your chosen option will be shown here."
         android:inputType="none"
         android:textColor="#F50A0101"
         android:textSize="30sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/mia"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.295" />
+        app:layout_constraintTop_toBottomOf="@+id/SYS" />
 
     <Button
         android:id="@+id/mia"
@@ -56,6 +63,11 @@
         android:layout_marginEnd="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginBottom="5dp"
+        android:background="#C80DA9EB"
+        android:clickable="true"
+        android:elevation="5dp"
+        android:fontFamily="@font/getinfo"
+        android:outlineProvider="bounds"
         android:text="More Info"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -65,11 +77,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="A.I.D.S"
-        android:textColor="#FF5722"
+        android:textColor="#030303"
         android:textSize="18sp"
-        android:textStyle="bold|italic"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="24dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

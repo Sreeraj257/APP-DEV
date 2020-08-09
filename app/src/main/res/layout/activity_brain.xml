@@ -4,54 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bra"
+    android:background="@drawable/gradient_back"
     tools:context=".brain">
 
     <Button
         android:id="@+id/SYMB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:background="#C80DA9EB"
+        android:elevation="5dp"
+        android:outlineProvider="bounds"
+        android:clickable="true"
+        android:fontFamily="@font/getinfo"
         android:text="@string/symptom"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <Button
         android:id="@+id/CAUB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:background="#C80DA9EB"
+        android:clickable="true"
+        android:elevation="5dp"
+        android:outlineProvider="bounds"
+        android:fontFamily="@font/getinfo"
         android:text="@string/cause"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
         android:id="@+id/tB"
-        android:layout_width="215dp"
-        android:layout_height="353dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:editable="false"
         android:ems="10"
+        android:fontFamily="@font/main"
         android:gravity="start|top"
         android:hint="Your chosen option will show here!"
         android:inputType="none"
         android:textSize="30sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/mi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.601"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SYMB"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/SYMB" />
 
     <Button
         android:id="@+id/mi"
@@ -60,6 +62,11 @@
         android:layout_marginEnd="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginBottom="5dp"
+        android:background="#C80DA9EB"
+        android:clickable="true"
+        android:elevation="5dp"
+        android:fontFamily="@font/getinfo"
+        android:outlineProvider="bounds"
         android:text="more info"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -69,11 +76,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Brain Tumer"
-        android:textColor="#FF5722"
+        android:textColor="#030303"
         android:textSize="18sp"
-        android:textStyle="bold|italic"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

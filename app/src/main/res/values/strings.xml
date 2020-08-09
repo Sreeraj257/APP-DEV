@@ -13,4 +13,7 @@
     <string name="click_button_below_to_take_hearing_test">Click Button Below To Take Hearing Test</string>
     <string name="get_info">Get Info</string>
     <string name="todo">TODO</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_map">MapActivity</string>
+    <string name="title_activity_splash">splash</string>
 </resources>

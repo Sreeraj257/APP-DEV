@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
 
     android:alpha="1"
-    android:background="@drawable/nurse"
+    android:background="@drawable/gradient_back"
     android:filterTouchesWhenObscured="false"
     android:soundEffectsEnabled="true"
     tools:context=".MainActivity">
@@ -17,64 +17,76 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/know_your_disease"
-        android:textColor="#DD1BB0"
-        android:textSize="40sp"
-        android:textStyle="bold|italic"
+        android:fontFamily="@font/mainstyle"
+        android:text="KNOW YOUR DISEASES"
+        android:textColor="#030303"
+        android:textSize="30sp"
+        android:textStyle="normal|bold"
+        app:fontFamily="@font/getinfo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
         android:id="@+id/rusted"
-        android:layout_width="203dp"
-        android:layout_height="178dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="407dp"
+        android:layout_height="wrap_content"
 
+        android:layout_marginTop="68dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9">
 
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        // android:textStyle="bold|italic"
+
 
         <RadioButton
             android:id="@+id/can"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checked="true"
+            android:fontFamily="@font/main"
             android:text="@string/Cancer"
             android:textSize="24sp"
-            android:textStyle="bold|italic" />
+            android:textStyle="bold" />
+
 
         <RadioButton
             android:id="@+id/aid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/main"
             android:text="@string/a_i_d_s"
             android:textSize="24sp"
-            android:textStyle="bold|italic" />
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/liv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/main"
             android:text="@string/liver_cirrhosis"
             android:textSize="24sp"
-            android:textStyle="bold|italic" />
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/kid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/main"
             android:text="@string/kidney_stone"
             android:textSize="24sp"
-            android:textStyle="bold|italic" />
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/bra"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/main"
             android:text="@string/brain_tumor"
             android:textSize="24sp"
-            android:textStyle="bold|italic" />
+            android:textStyle="bold" />
     </RadioGroup>
 
     <ImageButton
@@ -82,55 +94,88 @@
         style="@android:style/Widget.DeviceDefault.ImageButton"
         android:layout_width="57dp"
         android:layout_height="63dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:background="#40FFFFFF"
+        android:layout_marginBottom="16dp"
+        android:background="#908E6BBE"
         android:contentDescription="@string/todo"
         android:cropToPadding="true"
+        android:elevation="5dp"
+        android:outlineProvider="bounds"
         android:scaleType="centerInside"
         android:soundEffectsEnabled="true"
         android:src="@drawable/heard"
+        app:layout_constraintBottom_toTopOf="@+id/cli"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/podapatti" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/cli"
-        android:layout_width="142dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_width="413dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/style"
         android:text="Click the above button to take the hearing test."
+        android:textColor="#111010"
+        android:gravity="center_horizontal"
         android:textSize="14sp"
-        android:textStyle="bold|italic"
+        android:textStyle="bold"
+        app:fontFamily="@font/main"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hea" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/podapatti"
         android:layout_width="122dp"
         android:layout_height="36dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginTop="28dp"
+        android:background="#C80DA9EB"
+        android:clickable="true"
+        android:fontFamily="@font/getinfo"
+        android:elevation="5dp"
+        android:outlineProvider="bounds"
         android:text="@string/get_info"
-        app:layout_constraintBottom_toTopOf="@+id/cli"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rusted"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rusted" />
 
     <Button
         android:id="@+id/e1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="#F44336"
-        android:onClick="always"
-        android:text="Emergency Text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#C6090808"
+        android:text="SOS"
+        android:elevation="5dp"
+        android:outlineProvider="bounds"
+        android:textColor="#D2DD1515"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="246dp"
+        android:layout_height="wrap_content"
+        android:text="Which disease you want to know about?"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="89dp"
+        android:layout_height="69dp"
+        android:background="#00362C2C"
+        android:onClick="google"
+
+        app:layout_constraintBottom_toTopOf="@+id/hea"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/podapatti"
+        app:srcCompat="@drawable/common_google_signin_btn_icon_dark_focused" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

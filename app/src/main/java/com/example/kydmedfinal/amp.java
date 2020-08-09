@@ -15,6 +15,8 @@ import android.widget.Toast;
 public class amp extends AppCompatActivity {
     MediaPlayer player;
     public int counter;
+    int isvalid=0;
+    int pausevalue=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,12 @@ public class amp extends AppCompatActivity {
         setContentView(R.layout.activity_amp);
         player = MediaPlayer.create(this,R.raw.hear);
         Button score =findViewById(R.id.button5);
+        Button band =findViewById(R.id.button3);
+
+
+
+
+
 
         score.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,25 +71,52 @@ public class amp extends AppCompatActivity {
         });
 
 
+
+
     }
     public  void  play(View v)
     {   Toast.makeText(this,"Use earphones for accurate results",Toast.LENGTH_SHORT).show();
 
-        player.start();
+         if(isvalid==2)
+         {
+             isvalid=0;
+             counter=pausevalue;
+         }
+         player.start();
+
+
         TextView textView= (TextView) findViewById(R.id.textView);
         new CountDownTimer(120000, 1000){
             public void onTick(long millisUntilFinished){
                 TextView textView= findViewById(R.id.textView);
+                if(isvalid==0) {
+                    textView.setText(String.valueOf(counter));
+                    counter++;
+                }
+                else if(isvalid==1)
+                {
+                    onFinish();
 
-                textView.setText(String.valueOf(counter));
-                counter++;
+                }
+                else if(isvalid==2)
+                {
+                    TextView o =findViewById(R.id.textView);
+                    o.setText(String.valueOf(counter));
+                    pausevalue=counter;
+
+                }
             }
             public  void onFinish(){
                 TextView textView= (TextView) findViewById(R.id.textView);
 
-                textView.setText("FINISH!!");
+                textView.setText("0");
             }
+
+
+
+
         }.start();
+
     }
 
 
@@ -89,10 +124,13 @@ public class amp extends AppCompatActivity {
 
     public void  pause(View v)
     {
+        isvalid=2;
         player.pause();
     }
     public void  stop(View v)
     {
+        isvalid=1;
         player.stop();
+
     }
 }
