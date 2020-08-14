@@ -14,7 +14,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".splash"></activity>
+        <activity android:name=".timewala"></activity>
+        <activity android:name=".takepass" />
+        <activity android:name=".pass" />
+        <activity android:name=".knowit" />
+        <activity android:name=".splash" />
         <activity android:name=".MainActivity" />
 
         <meta-data

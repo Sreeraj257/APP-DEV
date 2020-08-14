@@ -45,7 +45,7 @@ public class kidney extends AppCompatActivity {
     public void tera()
     {
         TextView t1 = findViewById(R.id.tk);
-        t1.setText("1.severe pain in the groin and/or side.2.blood in urine.3.vomiting and nausea.4.white blood cells or pus in the urine.5.reduced amount of urine excreted.6.burning sensation during urination.7.persistent urge to urinate.8.fever and chills if there is an infection");
+        t1.setText("1.Severe pain in the groin and/or side.2.blood in urine.3.vomiting and nausea.4.white blood cells or pus in the urine.5.reduced amount of urine excreted.6.burning sensation during urination.7.persistent urge to urinate.8.fever and chills if there is an infection");
     }
 
     public void mera()

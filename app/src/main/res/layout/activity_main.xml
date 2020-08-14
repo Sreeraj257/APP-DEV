@@ -17,6 +17,8 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="200dp"
+        android:layout_marginRight="200dp"
         android:fontFamily="@font/mainstyle"
         android:text="KNOW YOUR DISEASES"
         android:textColor="#030303"
@@ -28,154 +30,129 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <RadioGroup
-        android:id="@+id/rusted"
-        android:layout_width="407dp"
-        android:layout_height="wrap_content"
-
-        android:layout_marginTop="68dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9">
-
-        // android:textStyle="bold|italic"
-
-
-        <RadioButton
-            android:id="@+id/can"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:fontFamily="@font/main"
-            android:text="@string/Cancer"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-
-        <RadioButton
-            android:id="@+id/aid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/main"
-            android:text="@string/a_i_d_s"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <RadioButton
-            android:id="@+id/liv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/main"
-            android:text="@string/liver_cirrhosis"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <RadioButton
-            android:id="@+id/kid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/main"
-            android:text="@string/kidney_stone"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <RadioButton
-            android:id="@+id/bra"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/main"
-            android:text="@string/brain_tumor"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-    </RadioGroup>
-
-    <ImageButton
-        android:id="@+id/hea"
-        style="@android:style/Widget.DeviceDefault.ImageButton"
-        android:layout_width="57dp"
-        android:layout_height="63dp"
-        android:layout_marginBottom="16dp"
-        android:background="#908E6BBE"
-        android:contentDescription="@string/todo"
-        android:cropToPadding="true"
-        android:elevation="5dp"
-        android:outlineProvider="bounds"
-        android:scaleType="centerInside"
-        android:soundEffectsEnabled="true"
-        android:src="@drawable/heard"
-        app:layout_constraintBottom_toTopOf="@+id/cli"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/cli"
-        android:layout_width="413dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:fontFamily="@font/style"
-        android:text="Click the above button to take the hearing test."
-        android:textColor="#111010"
-        android:gravity="center_horizontal"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:fontFamily="@font/main"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/podapatti"
-        android:layout_width="122dp"
+        android:id="@+id/podapatti1"
+        android:layout_width="0dp"
         android:layout_height="36dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
         android:background="#C80DA9EB"
         android:clickable="true"
-        android:fontFamily="@font/getinfo"
         android:elevation="5dp"
+        android:fontFamily="@font/getinfo"
+        android:onClick="common"
         android:outlineProvider="bounds"
-        android:text="@string/get_info"
+        android:text="common diseases"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rusted" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/e1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
         android:background="#C6090808"
-        android:text="SOS"
         android:elevation="5dp"
         android:outlineProvider="bounds"
+        android:text="SOS"
         android:textColor="#D2DD1515"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="246dp"
-        android:layout_height="wrap_content"
-        android:text="Which disease you want to know about?"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="89dp"
-        android:layout_height="69dp"
-        android:background="#00362C2C"
-        android:onClick="google"
-
-        app:layout_constraintBottom_toTopOf="@+id/hea"
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#C80DA9EB"
+        android:fontFamily="@font/getinfo"
+        android:onClick="calender"
+        android:text="my med Calender"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/podapatti"
-        app:srcCompat="@drawable/common_google_signin_btn_icon_dark_focused" />
+        app:layout_constraintTop_toBottomOf="@+id/podapatti1" />
+
+    <Button
+        android:id="@+id/hea"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#C80DA9EB"
+        android:clickable="true"
+        android:elevation="5dp"
+        android:fontFamily="@font/getinfo"
+        android:onClick="hear"
+        android:text="Take A Hearing test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#C80DA9EB"
+        android:fontFamily="@font/getinfo"
+        android:onClick="google"
+        android:text="Find nearest hospitals"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hea" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintEnd_toEndOf="@+id/button8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_google_maps" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="#C80DA9EB"
+        android:fontFamily="@font/getinfo"
+        android:text="Video tutorial"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/button10"
+        app:layout_constraintTop_toTopOf="@+id/button10"
+        app:srcCompat="@drawable/ic_magnify_black_48dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,11 +2,14 @@ package com.example.kydmedfinal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.IBinder;
 import android.text.Editable;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -23,8 +26,9 @@ public class amp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_amp);
         player = MediaPlayer.create(this,R.raw.hear);
-        Button score =findViewById(R.id.button5);
+        final Button score =findViewById(R.id.button5);
         Button band =findViewById(R.id.button3);
+
 
 
 
@@ -34,7 +38,12 @@ public class amp extends AppCompatActivity {
         score.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText great = findViewById(R.id.editText2);
+
+
+                player.stop();
+                 EditText great = findViewById(R.id.editText2);
+
+                great.setCursorVisible(false);
                 TextView old =findViewById(R.id.tH);
                 Double m = Double.valueOf(String.valueOf(great.getText()));
                 if(String.valueOf(great.getText()) == "\u0000")
@@ -75,52 +84,69 @@ public class amp extends AppCompatActivity {
 
     }
     public  void  play(View v)
-    {   Toast.makeText(this,"Use earphones for accurate results",Toast.LENGTH_SHORT).show();
+    {
 
-         if(isvalid==2)
-         {
-             isvalid=0;
-             counter=pausevalue;
-         }
-         player.start();
+        if(!player.isPlaying()) {
 
-
-        TextView textView= (TextView) findViewById(R.id.textView);
-        new CountDownTimer(120000, 1000){
-            public void onTick(long millisUntilFinished){
-                TextView textView= findViewById(R.id.textView);
-                if(isvalid==0) {
-                    textView.setText(String.valueOf(counter));
-                    counter++;
-                }
-                else if(isvalid==1)
-                {
-                    onFinish();
-
-                }
-                else if(isvalid==2)
-                {
-                    TextView o =findViewById(R.id.textView);
-                    o.setText(String.valueOf(counter));
-                    pausevalue=counter;
-
-                }
+            if(isvalid==2)
+            {
+                Toast.makeText(this,"Press the reset button !!",Toast.LENGTH_SHORT).show();
             }
-            public  void onFinish(){
-                TextView textView= (TextView) findViewById(R.id.textView);
+            if (isvalid == 0 || isvalid == 1) {
+                Toast.makeText(this,"Use earphones for accurate results",Toast.LENGTH_SHORT).show();
+                if (isvalid == 1)
+                    isvalid = 0;
 
-                textView.setText("0");
+                player.start();
+
+
+                final TextView textView = findViewById(R.id.textView);
+                new CountDownTimer(120000, 1000) {
+                    public void onTick(long millisUntilFinished) {
+
+                        if (isvalid == 0) {
+                            textView.setText(String.valueOf(counter));
+                            counter++;
+                        } else if (isvalid == 2) {
+
+                            TextView o = findViewById(R.id.textView);
+                            o.setText(String.valueOf(counter));
+
+                        } else if (isvalid == 1) {
+                            counter = 0;
+                            EditText great = findViewById(R.id.editText2);
+                            great.setText(null);
+                            isvalid=1;
+                            TextView textView1 = findViewById(R.id.textView);
+                            textView1.setText("0");
+
+                            great.setText("0");
+                            player.stop();
+
+                           cancel();
+                        }
+                    }
+
+                    public void onFinish() {
+
+                        TextView textView = findViewById(R.id.textView);
+
+                        textView.setText("Time is too long consult yor ear docter soon!!");
+                        textView.setTextColor(Integer.parseInt("#bdbdbd"));
+                        player.stop();
+                        counter = 0;
+                        isvalid = 0;
+
+                    }
+                }.start();
             }
-
-
-
-
-        }.start();
+        }
+        else
+        {
+            Toast.makeText(this,"Frequency is playing, wait till you hear a sound!!",Toast.LENGTH_SHORT).show();
+        }
 
     }
-
-
-
 
     public void  pause(View v)
     {
@@ -129,8 +155,16 @@ public class amp extends AppCompatActivity {
     }
     public void  stop(View v)
     {
-        isvalid=1;
-        player.stop();
 
+
+        isvalid=1;
+
+
+
+    }
+    public void back(View view)
+    {
+        Intent call =new Intent(amp.this,MainActivity.class);
+        finish();
     }
 }
