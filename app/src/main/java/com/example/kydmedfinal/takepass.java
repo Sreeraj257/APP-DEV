@@ -26,7 +26,7 @@ public class takepass extends AppCompatActivity {
                  EditText pass=findViewById(R.id.editText);
                  String password=pass.getText().toString();
 
-                 if(password.length()==5) {
+                 if(password.length()==4) {
                      SharedPreferences shrd = getSharedPreferences("demo", MODE_PRIVATE);
                      SharedPreferences.Editor editor = shrd.edit();
                      editor.putString("str", password);
@@ -41,7 +41,7 @@ public class takepass extends AppCompatActivity {
                  else
                  {
                      TextView we =  findViewById(R.id.textView9);
-                     we.setText("Please enter 5 digit number!!");
+                     we.setText("Please enter 4 digit number!!");
 
                  }
 

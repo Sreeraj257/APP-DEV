@@ -3,6 +3,7 @@ package com.example.kydmedfinal;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,13 +33,10 @@ public class amp extends AppCompatActivity {
 
 
 
-
-
-
-
         score.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
 
 
                 player.stop();
@@ -53,26 +52,31 @@ public class amp extends AppCompatActivity {
                 }
                 if(m<=40)
                 {
+                    old.setTextColor(Color.GREEN);
                     old.setText("PERFECT");
 
                 }
                 if(m>40 && m<50)
                 {
+                    old.setTextColor(Color.BLUE);
                     old.setText("VERY VERY GOOD");
 
                 }
                 if(m>=50&&m<60)
                 {
+                    old.setTextColor(Color.YELLOW);
                     old.setText("AVERAGE");
 
                 }
                 if(m>=60&&m<70)
                 {
+                    old.setTextColor(Color.YELLOW);
                     old.setText("FAIR");
 
                 }
                 if(m>=70)
                 {
+                    old.setTextColor(Color.RED);
                     old.setText("POOR");
 
                 }
@@ -165,6 +169,13 @@ public class amp extends AppCompatActivity {
     public void back(View view)
     {
         Intent call =new Intent(amp.this,MainActivity.class);
+        startActivity(call);
+        finish();
+    }
+    public void info(View view)
+    {
+        Intent call =new Intent(amp.this,coloramp.class);
+        startActivity(call);
         finish();
     }
 }

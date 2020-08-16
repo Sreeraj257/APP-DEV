@@ -44,7 +44,7 @@ public class liver extends AppCompatActivity {
     public void tera()
     {
         TextView t1 = findViewById(R.id.tL);
-        t1.setText("1.Yellowing of the skin (jaundice) due to the accumulation of bilirubin in the blood.2.Fatigue.3.Weakness.4.Loss of appetite.5.Itching.6. Easy bruising from decreased production of blood clotting factors by the diseased liver.");
+        t1.setText("1.Yellowing of the skin (jaundice) due to the accumulation of bilirubin in the blood.\n2.Fatigue.\n3.Weakness.\n4.Loss of appetite.\n5.Itching.\n6. Easy bruising from decreased production of blood clotting factors by the diseased liver.");
     }
 
     public void mera()

@@ -75,10 +75,5 @@ public class knowit extends AppCompatActivity {
 
 
     }
-    public void takeback(View view)
-    {
-        Intent call = new Intent(knowit.this,MainActivity.class);
-        startActivity(call);
-        finish();
-    }
+
 }

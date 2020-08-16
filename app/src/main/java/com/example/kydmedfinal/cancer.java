@@ -46,7 +46,7 @@ public class cancer extends AppCompatActivity {
     public void tera()
     {
         TextView t1 = findViewById(R.id.tc);
-        t1.setText("1.Persistent cough or blood-tinged saliva 2.A change in bowel habits3.Blood in the stool4.Unexplained anemia (low blood count)5.Breast lump or breast discharge6.Lumps in the testicles.7.A change in urination.");
+        t1.setText("1.Persistent cough or blood-tinged saliva. \n2.A change in bowel habits.\n3.Blood in the stool.\n4.Unexplained anemia (low blood count).\n5.Breast lump or breast discharge.\n6.Lumps in the testicles.\n7.A change in urination.");
     }
 
     public void mera()

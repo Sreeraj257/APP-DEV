@@ -54,14 +54,5 @@ public class pass extends AppCompatActivity {
   }
 
     }
-    public void passnew(View view)
-    {
-        SharedPreferences shrd = getSharedPreferences("demo", MODE_PRIVATE);
-        SharedPreferences.Editor editor = shrd.edit();
-        editor.clear();
-        Intent call = new Intent(pass.this,takepass.class);
-        startActivity(call);
-        finish();
 
-    }
 }

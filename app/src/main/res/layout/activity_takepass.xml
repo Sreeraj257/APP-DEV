@@ -77,10 +77,22 @@
         android:layout_height="105dp"
         android:layout_marginTop="48dp"
         android:gravity="center_horizontal"
-        android:hint="Please enter a five digit password."
+        android:hint="Please enter a four digit password."
         android:textColor="#F7EE0808"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/ic_pin_code" />
 </androidx.constraintlayout.widget.ConstraintLayout>

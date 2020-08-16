@@ -46,7 +46,7 @@ public class aids extends AppCompatActivity {
     public void tera()
     {
         TextView t1 = findViewById(R.id.T1);
-        t1.setText("1.Rapid weight loss.2.Recurring fever or profuse night sweats.3.Extreme and unexplained tiredness.4.Prolonged swelling of the lymph glands in the armpits, groin, or neck.5.Diarrhea that lasts for more than a week.6.Sores of the mouth, anus, or genitals.7.Pneumonia.");
+        t1.setText("1.Rapid weight loss.\n2.Recurring fever or profuse night sweats.\n3.Extreme and unexplained tiredness.\n4.Prolonged swelling of the lymph glands in the armpits, groin, or neck.\n5.Diarrhea that lasts for more than a week.\n6.Sores of the mouth, anus, or genitals.\n7.Pneumonia.");
     }
 
     public void mera()

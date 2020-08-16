@@ -1,4 +1,4 @@
-package com.example.kydmedfinal;
+package com.example.kydmedfinal.weekdays;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,19 +11,19 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import com.example.kydmedfinal.R;
+
 import java.util.Calendar;
 
-public class mondaytime extends AppCompatActivity {
+public class wednesdaytime extends AppCompatActivity {
     TextView textView;
     Button button;
     Context context;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mondaytime);
-
+        setContentView(R.layout.activity_wednesdaytime);
         textView=findViewById(R.id.ttime1);
         button = findViewById(R.id.time1);
 
@@ -37,12 +37,12 @@ public class mondaytime extends AppCompatActivity {
         final int hour =calendar.get(Calendar.HOUR_OF_DAY);
         final int minute =calendar.get(Calendar.MINUTE);
 
-         final SharedPreferences getshared1 = getSharedPreferences("montime1",MODE_PRIVATE);
-         final String value1 = getshared1.getString("str1","0");
-        final SharedPreferences getshared2 = getSharedPreferences("montime2",MODE_PRIVATE);
-         final String value2 = getshared2.getString("str2","0");
-        final SharedPreferences getshared3 = getSharedPreferences("montime3",MODE_PRIVATE);
-         final String value3 = getshared3.getString("str3","0");
+        final SharedPreferences getshared1 = getSharedPreferences("wedtime1",MODE_PRIVATE);
+        final String value1 = getshared1.getString("str1","0");
+        final SharedPreferences getshared2 = getSharedPreferences("wedtime2",MODE_PRIVATE);
+        final String value2 = getshared2.getString("str2","0");
+        final SharedPreferences getshared3 = getSharedPreferences("wedtime3",MODE_PRIVATE);
+        final String value3 = getshared3.getString("str3","0");
 
 
 
@@ -69,36 +69,36 @@ public class mondaytime extends AppCompatActivity {
             textView3.setHint(value3);
 
 
-            button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    SharedPreferences getshared1 = getSharedPreferences("montime1",MODE_PRIVATE);
-                     String value1 = getshared1.getString("str1","0");
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences getshared1 = getSharedPreferences("wedtime1",MODE_PRIVATE);
+                String value1 = getshared1.getString("str1","0");
 
 
 
-                    if(value1.equals("0")) {
+                if(value1.equals("0")) {
 
-                        TimePickerDialog timePickerDialog = new TimePickerDialog(context, new TimePickerDialog.OnTimeSetListener() {
-                            @Override
-                            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                                textView.setText(hourOfDay + ":" + minute);
-
-
-                                SharedPreferences shrd = getSharedPreferences("montime1", MODE_PRIVATE);
-                                SharedPreferences.Editor editor = shrd.edit();
-                                editor.putString("str1", hourOfDay + ":" + minute);
-                                editor.apply();
+                    TimePickerDialog timePickerDialog = new TimePickerDialog(context, new TimePickerDialog.OnTimeSetListener() {
+                        @Override
+                        public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                            textView.setText(hourOfDay + ":" + minute);
 
 
-                            }
-                        }, hour, minute, android.text.format.DateFormat.is24HourFormat(context));
-                        timePickerDialog.show();
-                    }
+                            SharedPreferences shrd = getSharedPreferences("wedtime1", MODE_PRIVATE);
+                            SharedPreferences.Editor editor = shrd.edit();
+                            editor.putString("str1", hourOfDay + ":" + minute);
+                            editor.apply();
 
 
+                        }
+                    }, hour, minute, android.text.format.DateFormat.is24HourFormat(context));
+                    timePickerDialog.show();
                 }
-            });
+
+
+            }
+        });
 
 
 
@@ -109,8 +109,8 @@ public class mondaytime extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences getshared2 = getSharedPreferences("montime2",MODE_PRIVATE);
-                 String value2 = getshared2.getString("str2","0");
+                SharedPreferences getshared2 = getSharedPreferences("wedtime2",MODE_PRIVATE);
+                String value2 = getshared2.getString("str2","0");
 
                 if(value2.equals("0")) {
 
@@ -120,7 +120,7 @@ public class mondaytime extends AppCompatActivity {
                             textView2.setText(hourOfDay + ":" + minute);
 
 
-                            SharedPreferences shrd = getSharedPreferences("montime2", MODE_PRIVATE);
+                            SharedPreferences shrd = getSharedPreferences("wedtime2", MODE_PRIVATE);
                             SharedPreferences.Editor editor = shrd.edit();
                             editor.putString("str2", hourOfDay + ":" + minute);
                             editor.apply();
@@ -146,8 +146,8 @@ public class mondaytime extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 SharedPreferences getshared3 = getSharedPreferences("montime3",MODE_PRIVATE);
-                 String value3 = getshared3.getString("str3","0");
+                SharedPreferences getshared3 = getSharedPreferences("wedtime3",MODE_PRIVATE);
+                String value3 = getshared3.getString("str3","0");
 
                 if(value3.equals("0")) {
 
@@ -157,7 +157,7 @@ public class mondaytime extends AppCompatActivity {
                             textView3.setText(hourOfDay + ":" + minute);
 
 
-                            SharedPreferences shrd = getSharedPreferences("montime3", MODE_PRIVATE);
+                            SharedPreferences shrd = getSharedPreferences("wedtime3", MODE_PRIVATE);
                             SharedPreferences.Editor editor = shrd.edit();
                             editor.putString("str3", hourOfDay + ":" + minute);
                             editor.apply();
@@ -199,22 +199,5 @@ public class mondaytime extends AppCompatActivity {
 
             }
         });
-
-
-        //reset
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
 }

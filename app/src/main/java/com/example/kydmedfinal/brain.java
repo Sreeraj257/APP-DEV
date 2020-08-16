@@ -48,7 +48,7 @@ public class brain extends AppCompatActivity {
     public void golo()
     {
         TextView t1 = findViewById(R.id.tB);
-        t1.setText("1.Headaches, which may be severe and worsen with activity or in the early morning.2.Seizures. People may experience different types of seizures. Certain drugs can help prevent or control them.3.Personality or memory changes.4.Nausea or vomiting.5.Fatigue.6.Drowsiness.7.Sleep problems.8.Memory problems ");
+        t1.setText("1.Headaches, which may be severe and worsen with activity or in the early morning.\n2.Seizures. People may experience different types of seizures. Certain drugs can help prevent or control them.\n3.Personality or memory changes.\n4.Nausea or vomiting.\n5.Fatigue.\n6.Drowsiness.\n7.Sleep problems.\n8.Memory problems ");
     }
 
     public void molo()

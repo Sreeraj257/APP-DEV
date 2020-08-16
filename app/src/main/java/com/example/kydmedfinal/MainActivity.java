@@ -2,6 +2,7 @@ package com.example.kydmedfinal;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -68,12 +69,29 @@ public class MainActivity extends AppCompatActivity {
         Intent call1 = new Intent(this, knowit.class);
         startActivity(call1);
 
+
     }
     public void calender(View view)
     {
         Intent call =new Intent(MainActivity.this,pass.class);
         startActivity(call);
 
+    }
+    public void passnew(View view)
+    {
+        SharedPreferences shrd = getSharedPreferences("demo", MODE_PRIVATE);
+        SharedPreferences.Editor editor = shrd.edit();
+        editor.clear();
+        Intent call = new Intent(MainActivity.this,takepass.class);
+        startActivity(call);
+
+
+    }
+    public void medshop(View view)
+    {
+        Uri uri = Uri.parse("https://www.medlife.com");
+        Intent see = new Intent(Intent.ACTION_VIEW,uri);
+        startActivity(see);
     }
 
 

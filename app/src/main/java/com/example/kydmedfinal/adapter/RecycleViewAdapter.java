@@ -12,8 +12,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.kydmedfinal.R;
+import com.example.kydmedfinal.RecyclerViewInterface;
 
 public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.ProgramViewHolder>{
+    private RecyclerViewInterface recyclerViewInterface;
 
 
 
@@ -21,9 +23,10 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
 
     private Context context ;
     private String[] data;
-    public RecycleViewAdapter(String[] data)
+    public RecycleViewAdapter(String[] data,RecyclerViewInterface recyclerViewInterface)
     {
         this.data=data;
+        this.recyclerViewInterface =recyclerViewInterface;
     }
 
     @NonNull
@@ -55,6 +58,14 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
             super(view);
             imggicon = view.findViewById(R.id.imgicon);
             txttitle =view.findViewById(R.id.texttitle);
+            view.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            recyclerViewInterface.onItemClick(getAdapterPosition());
+                                        }
+                                    }
+            );
+
 
         }
     }
