@@ -185,8 +185,8 @@
 
         <ImageView
             android:id="@+id/imageView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="60dp"
@@ -194,25 +194,23 @@
             android:layout_marginRight="10dp"
             app:layout_constraintStart_toStartOf="@+id/button10"
             app:layout_constraintTop_toTopOf="@+id/button10"
-            app:srcCompat="@drawable/ic_lock" />
-
-
+            app:srcCompat="@drawable/ic_medical" />
 
 
         <Button
-            android:id="@+id/button14"
-            android:layout_weight="1"
-            android:onClick="passnew"
-            android:layout_height="wrap_content"
+            android:id="@+id/button11"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="60dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
+            android:layout_weight="1"
             android:background="#C80DA9EB"
             android:fontFamily="@font/getinfo"
-            android:text="Change Password"
+            android:onClick="vidd"
+            android:text="My Med routine"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -252,36 +250,68 @@
 
         <ImageView
             android:id="@+id/imageView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="60dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             app:layout_constraintStart_toStartOf="@+id/button10"
             app:layout_constraintTop_toTopOf="@+id/button10"
-            app:srcCompat="@drawable/ic_magnify_black_48dp"
-            android:layout_gravity="center_horizontal"/>
-
-
+            app:srcCompat="@drawable/ic_lock" />
 
 
         <Button
-            android:id="@+id/button11"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
+            android:id="@+id/button14"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="60dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
+            android:layout_weight="1"
             android:background="#C80DA9EB"
             android:fontFamily="@font/getinfo"
-            android:text="Video tutorial"
+            android:onClick="passnew"
+            android:text="change password"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView20"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintStart_toStartOf="@+id/button10"
+            app:layout_constraintTop_toTopOf="@+id/button10"
+            app:srcCompat="@drawable/ic_lock" />
+
+
+        <Button
+            android:id="@+id/button20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="#C80DA9EB"
+            android:fontFamily="@font/getinfo"
+            android:onClick="check"
+            android:text="symtom checker"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
 
 
 

@@ -1,16 +1,18 @@
 package com.example.kydmedfinal;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.Toast;
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -23,6 +25,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        SharedPreferences getshared1 = getSharedPreferences("logname",MODE_PRIVATE);
+        String value1 = getshared1.getString("str1","0");
+        if(value1=="0")
+        {
+            Intent call = new Intent(MainActivity.this,login.class);
+            startActivity(call);
+        }
+
+
+
 
 
 
@@ -54,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void hear(View view)
     {
+
+
 
             Intent call = new Intent(this, amp.class);
             startActivity(call);
@@ -93,6 +108,21 @@ public class MainActivity extends AppCompatActivity {
         Intent see = new Intent(Intent.ACTION_VIEW,uri);
         startActivity(see);
     }
+    public void vidd(View view)
+    {
+        Intent intent=new Intent(MainActivity.this,mymedtime.class);
+        startActivity(intent);
+    }
+
+    public void check(View view)
+    {
+        Intent call = new Intent(MainActivity.this,symptoms.class);
+        startActivity(call);
+    }
+
+
+
+
 
 
 }

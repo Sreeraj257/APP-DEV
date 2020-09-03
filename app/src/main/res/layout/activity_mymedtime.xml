@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradgreen"
+    tools:context=".mymedtime">
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/main"
+        android:gravity="center"
+        android:text="My Med Routine"
+        android:textAllCaps="true"
+        android:textColor="#F70C0B0B"
+        android:textSize="34dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/gradgreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Day"
+                android:textSize="24dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Time T1"
+                android:textSize="20dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Time T2"
+                android:textSize="20dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Time T3"
+                android:textSize="20dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Monday"
+                android:textSize="24dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/mont1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Monday"
+                android:textSize="24dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/mont2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Monday"
+                android:textSize="24dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/mont3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Monday"
+                android:textSize="24dp">
+
+            </TextView>
+
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Tuesday"
+                android:textSize="24dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tuet1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Monday"
+                android:textSize="24dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tuet2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Monday"
+                android:textSize="24dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tuet3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Monday"
+                android:textSize="24dp">
+
+            </TextView>
+
+
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Wednesday"
+                android:textSize="24dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/wedt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Monday"
+                android:textSize="24dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/wedt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Monday"
+                android:textSize="24dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/wedt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Monday"
+                android:textSize="24dp">
+
+            </TextView>
+
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Thursday"
+                android:textSize="24dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/thut1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Monday"
+                android:textSize="24dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/thut2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Monday"
+                android:textSize="24dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/thut3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Monday"
+                android:textSize="24dp">
+
+            </TextView>
+        </TableRow>>
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Friday"
+                    android:textSize="24dp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/frit1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Monday"
+                    android:textSize="24dp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/frit2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Monday"
+                    android:textSize="24dp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/frit3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Monday"
+                    android:textSize="24dp">
+
+                </TextView>
+
+
+            </TableRow>
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Satday"
+                android:textSize="24dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/satt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Monday"
+                android:textSize="24dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/satt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Monday"
+                android:textSize="24dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/satt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Monday"
+                android:textSize="24dp">
+
+            </TextView>
+
+
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Sunday"
+                android:textSize="24dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/sunt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Monday"
+                android:textSize="24dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/sunt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Monday"
+                android:textSize="24dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/sunt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Monday"
+                android:textSize="24dp">
+
+            </TextView>
+
+
+        </TableRow>
+
+
+
+
+
+
+
+
+
+
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

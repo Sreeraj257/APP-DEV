@@ -2,16 +2,31 @@ package com.example.kydmedfinal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlarmManager;
+
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.TimePickerDialog;
+
 import android.content.Context;
+import android.content.Intent;
+
 import android.content.SharedPreferences;
+
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.util.Calendar;
+
+import static java.util.Calendar.HOUR_OF_DAY;
+import static java.util.Calendar.MINUTE;
+import static java.util.Calendar.SECOND;
 
 public class mondaytime extends AppCompatActivity {
     TextView textView;
@@ -19,13 +34,17 @@ public class mondaytime extends AppCompatActivity {
     Context context;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mondaytime);
 
+
+
         textView=findViewById(R.id.ttime1);
         button = findViewById(R.id.time1);
+
 
         final TextView textView2=findViewById(R.id.ttime2);
         Button button2 = findViewById(R.id.time2);
@@ -33,7 +52,7 @@ public class mondaytime extends AppCompatActivity {
         final TextView textView3=findViewById(R.id.ttime3);
         Button button3 = findViewById(R.id.time3);
         context=this;
-        Calendar calendar =Calendar.getInstance();
+        final Calendar calendar =Calendar.getInstance();
         final int hour =calendar.get(Calendar.HOUR_OF_DAY);
         final int minute =calendar.get(Calendar.MINUTE);
 
@@ -200,21 +219,44 @@ public class mondaytime extends AppCompatActivity {
             }
         });
 
+        //
+        Button button1=findViewById(R.id.time8);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mondaytime.this,"Time Saved",Toast.LENGTH_SHORT).show();
+//                Intent intent = new Intent(mondaytime.this, RemainderBroadcast1.class);
+//                PendingIntent pendingIntent =PendingIntent.getBroadcast(mondaytime.this,0,intent,0);
+//                AlarmManager alarmManager =(AlarmManager) getSystemService(ALARM_SERVICE);
+//                long timebu=System.currentTimeMillis();
+//                long timenw=10*1000;
+//
+//
+//                Calendar calendar1=Calendar.getInstance();
+//                calendar1.set(HOUR_OF_DAY,14);
+//                calendar1.set(MINUTE,29);
+//                calendar1.set(SECOND,0);
+//                long real=calendar1.getTimeInMillis();
+//
+//                alarmManager.set(AlarmManager.RTC_WAKEUP,timebu+timenw,pendingIntent);
 
-        //reset
-
-
-
-
-
-
-
-
+            }
+        });
 
 
 
 
 
     }
+
+
+
+
+
+
+
+
+
+
 
 }

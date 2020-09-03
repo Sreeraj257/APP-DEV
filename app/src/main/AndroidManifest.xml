@@ -7,14 +7,21 @@
          location permissions for the 'MyLocation' functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/heart_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".coloramp"></activity>
+        <activity android:name=".login"></activity>
+        <activity android:name=".disease" />
+        <activity android:name=".symptoms" />
+        <activity android:name=".webactivity" />
+        <activity android:name=".mymedtime" />
+        <activity android:name=".Reaptingactivity" />
+        <activity android:name=".coloramp" />
         <activity android:name=".weekdays.sundaytime" />
         <activity android:name=".weekdays.saturdaytime" />
         <activity android:name=".weekdays.fridaytime" />
@@ -58,6 +65,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver android:name=".RemainderBroadcast1" />
     </application>
 
 </manifest>
