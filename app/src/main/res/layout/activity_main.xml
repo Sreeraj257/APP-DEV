@@ -95,18 +95,18 @@
 
         <Button
             android:id="@+id/button4"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="60dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
+            android:layout_weight="1"
             android:background="#C80DA9EB"
             android:fontFamily="@font/getinfo"
             android:onClick="calender"
-            android:text="my med Calender"
+            android:text="set your medicine time"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/podapatti1" />
@@ -176,7 +176,7 @@
             android:background="#C80DA9EB"
             android:fontFamily="@font/getinfo"
             android:onClick="common"
-            android:text="common diseases"
+            android:text="know about diseases"
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -291,7 +291,7 @@
             android:layout_marginRight="10dp"
             app:layout_constraintStart_toStartOf="@+id/button10"
             app:layout_constraintTop_toTopOf="@+id/button10"
-            app:srcCompat="@drawable/ic_lock" />
+            app:srcCompat="@drawable/ic_coronavirus" />
 
 
         <Button
@@ -308,6 +308,26 @@
             android:fontFamily="@font/getinfo"
             android:onClick="check"
             android:text="symtom checker"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:background="#C6090808"
+            android:fontFamily="@font/getinfo"
+            android:onClick="reset"
+            android:text="reset"
+            android:textColor="#D2DD1515"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

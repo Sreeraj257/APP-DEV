@@ -12,10 +12,11 @@
     <application
         android:allowBackup="true"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/heart_round"
+        android:icon="@drawable/heart_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".login"></activity>
+        <activity android:name=".reset"></activity>
+        <activity android:name=".login" />
         <activity android:name=".disease" />
         <activity android:name=".symptoms" />
         <activity android:name=".webactivity" />

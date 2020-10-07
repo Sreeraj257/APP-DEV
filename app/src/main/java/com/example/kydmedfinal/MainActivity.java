@@ -3,16 +3,12 @@ package com.example.kydmedfinal;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
 
 
 public class MainActivity extends AppCompatActivity {
@@ -116,7 +112,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void check(View view)
     {
-        Intent call = new Intent(MainActivity.this,symptoms.class);
+        Intent call = new Intent(MainActivity.this, symptoms.class);
+        startActivity(call);
+    }
+    public void reset(View view)
+    {
+        Intent call =new Intent(MainActivity.this,reset.class);
         startActivity(call);
     }
 

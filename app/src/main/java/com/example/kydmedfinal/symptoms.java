@@ -146,6 +146,7 @@ public class symptoms extends AppCompatActivity { Button dis;
                 dis_page.putExtra("max",max);
                 dis_page.putExtra("c",c);
                 startActivity(dis_page);
+                finish();
 
             }
 
